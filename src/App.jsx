@@ -1,11 +1,25 @@
+import { useState , useEffect } from 'react'
+import Header from './components/Header/Header.jsx'
 
 
 function App() {
+
+  const [courses , setCourses] = useState([]);
+
+  useEffect(()=>{
+    fetch('data.json')
+    .then(res => res.json())
+    .then(data => setCourses(data))
+   
+  },[])
  
 
   return (
     <>
-     <h1 className="text-xl">Welcome new project </h1>
+     <Header/>
+     <main>
+
+     </main>
     </>
   )
 }
