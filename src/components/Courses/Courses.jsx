@@ -1,11 +1,11 @@
 
 import Course from './Course/Course.jsx'
 
-export default function Courses({courses}) {
+export default function Courses({courses, addToCart }) {
 
   return (
     <section className='grid grid-cols-3 gap-5'>
-       {courses.map((course, idx) =>  <Course key={idx} course={course} />)}
+       {courses.map((course, idx) =>  <Course key={idx} course={course} addToCart={addToCart}/>)}
     </section>
   )
 }

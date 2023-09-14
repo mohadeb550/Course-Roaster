@@ -2,7 +2,7 @@
 import { FiDollarSign } from 'react-icons/fi';
 // import { LuBookOpen } from 'react-icons/Lu';
 
-export default function Course({course}) {
+export default function Course({course, addToCart }) {
 
     const { image, title, description, price , credit } = course;
 
@@ -22,7 +22,7 @@ export default function Course({course}) {
         </div>
 
         <button className="font-semibold bg-blue-500 text-white
-         w-full p-1 rounded-md hover:bg-blue-600 transition-all"> Select </button>
+         w-full p-1 rounded-md hover:bg-blue-600 transition-all" onClick={()=> addToCart(course)}> Select </button>
     </div>
   )
 }
