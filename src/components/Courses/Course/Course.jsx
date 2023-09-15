@@ -1,6 +1,6 @@
 
 import { FiDollarSign } from 'react-icons/fi';
-// import { LuBookOpen } from 'react-icons/Lu';
+import { FiBookOpen } from 'react-icons/fi'; 
 
 export default function Course({course, addToCart }) {
 
@@ -18,7 +18,7 @@ export default function Course({course, addToCart }) {
 
         <div className="flex justify-between font-semibold text-gray-500">
             <h4> <FiDollarSign className='inline text-xl'/> Price : {price} </h4>
-            <h4> Credit : {credit}hr </h4>     
+            <h4> <FiBookOpen className='inline text-xl'/> Credit : {credit}hr </h4>     
         </div>
 
         <button className="font-semibold bg-blue-500 text-white

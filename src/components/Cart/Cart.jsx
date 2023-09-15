@@ -2,7 +2,7 @@
 
 export default function Cart({cart, credit, cost, totalPrice}) {
   return (
-    <div className="p-4 bg-white w-[700px] h-fit rounded-xl">
+    <div className="p-4 bg-white  h-fit rounded-xl mb-5 md:mb-0">
         <h3 className="font-bold text-blue-500 text-xl pb-5 border-b"> Credit Hour Remaining {credit} hr</h3>
         <h2 className="my-5 font-bold text-2xl"> Course Name </h2>
 
