@@ -1,4 +1,5 @@
 
+import PropTypes from 'prop-types'
 
 export default function Cart({cart, credit, cost, totalPrice}) {
   return (
@@ -7,10 +8,19 @@ export default function Cart({cart, credit, cost, totalPrice}) {
         <h2 className="my-5 font-bold text-2xl"> Course Name </h2>
 
         <div className="pb-6 font-medium border-b-2 text-lg  text-gray-500 space-y-2">
-          {cart.map((course, index) => <p> {index+1}. {course.title} </p>)}
+          {cart.map((course, index) => <p key={course.id}> {index+1}. {course.title} </p>)}
         </div>
         <h4 className="text-gray-600 font-semibold text-lg border-b py-3">Total Credit Hour : {cost} </h4>
         <h4 className="text-gray-500 font-bold text-lg pt-4"> Total Price : {totalPrice} USD </h4>
     </div>
   )
+}
+
+
+
+Cart.propTypes = {
+  cart: PropTypes.array,
+  credit: PropTypes.number,
+  cost : PropTypes.number,
+  totalPrice: PropTypes.number
 }

@@ -25,7 +25,7 @@ function App() {
     );
 
     if (credit < course.credit) {
-      return toast.error("You dont have sufficient credit", {
+      return toast.error("You don't have sufficient credit", {
         position: "top-center",
         autoClose: 2201,
         hideProgressBar: false,
@@ -59,7 +59,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className="px-[4%] mx-auto bg-[#F3F3F3] flex flex-col md:flex-row gap-5 ">
+      <main className="px-[4%] mx-auto bg-[#F3F3F3] flex flex-col md:flex-row gap-5 pb-4 md:pb-16 ">
         <Courses courses={courses} addToCart={addToCart} />
         <Cart cart={cart} credit={credit} cost={cost} totalPrice={totalPrice} />
       </main>

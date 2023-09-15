@@ -1,6 +1,7 @@
 
 import { FiDollarSign } from 'react-icons/fi';
 import { FiBookOpen } from 'react-icons/fi'; 
+import PropTypes from 'prop-types'
 
 export default function Course({course, addToCart }) {
 
@@ -25,4 +26,10 @@ export default function Course({course, addToCart }) {
          w-full p-1 rounded-md hover:bg-blue-600 transition-all" onClick={()=> addToCart(course)}> Select </button>
     </div>
   )
+}
+
+
+Course.propTypes = {
+  course: PropTypes.object,
+  addToCart: PropTypes.func
 }

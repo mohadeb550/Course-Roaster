@@ -1,5 +1,6 @@
 
 import Course from './Course/Course.jsx'
+import PropTypes from 'prop-types'
 
 export default function Courses({courses, addToCart }) {
 
@@ -11,3 +12,8 @@ export default function Courses({courses, addToCart }) {
 }
 
 
+
+Courses.propTypes = {
+  courses: PropTypes.array,
+  addToCart: PropTypes.func
+}
